@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tag3</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Radio - Buttons</h1>
+        <button id="read" class="btn green">lesen</button>
+        <button id="write" class="btn red">schreiben</button>
+
+        <div class="row">
+            <p>
+                <label>
+              <input name="group1" class="anrede" type="radio" value="red" checked />
+              <span>Red</span>
+            </label>
+            </p>
+            <p>
+                <label>
+              <input name="group1"  class="anrede"  type="radio" value="yellow" />
+              <span>Yellow</span>
+            </label>
+            </p>
+            <p>
+                <label>
+                    <input class="with-gap"  class="anrede"  name="group1" value="green" type="radio"  />
+                    <span>Green</span>
+                </label>
+            </p>
+            <p>
+                <label>
+              <input name="group1"  class="anrede"  type="radio" value="brown" disabled="disabled" />
+              <span>Brown</span>
+            </label>
+            </p>
+        </div>
+
+        <script>
+            $(function() {
+                // select all inputs from type radio with class anrede
+                $('input:radio.anrede').each(function(e) {
+                    $(this).next().addClass('text');
+                    console.log($(this).val());
+                });
+                $('#read').click(function(e) {
+                    e.preventDefault();
+
+                });
+            });
+        </script>
+    </body>
+
+</html>

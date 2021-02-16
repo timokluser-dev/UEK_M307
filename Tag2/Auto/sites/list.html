@@ -1,0 +1,94 @@
+<table class="data-table striped orange lighten-2">
+    <thead class="amber accent-4">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>kraftstoff</th>
+            <th>farbe</th>
+            <th>bauart</th>
+            <th>tank</th>
+            <th>action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>VW Passat</td>
+            <td>Diesel</td>
+            <td class="color-col">
+                <div class="color" style="background-color: #808080;">
+                </div>
+                <p style="color: #808080;">#808080</p>
+            </td>
+            <td>Limousine</td>
+            <td>0</td>
+            <td data-id="1">
+                <span class="material-icons blue-text mode-tanken">directions_car</span>
+                <span class="material-icons green-text mode-edit">mode_edit</span>
+                <span class="material-icons red-text mode-delete">delete</span>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>TESLA Model S</td>
+            <td>Elektro</td>
+            <td class="color-col">
+                <div class="color" style="background-color: #ffffff;">
+                </div>
+                <p style="color: #ffffff;">#ffffff</p>
+            </td>
+            <td>Limousine</td>
+            <td>0</td>
+            <td data-id="2">
+                <span class="material-icons blue-text mode-tanken">directions_car</span>
+                <span class="material-icons green-text mode-edit">mode_edit</span>
+                <span class="material-icons red-text mode-delete">delete</span>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>TESLA Model X</td>
+            <td>Elektro</td>
+            <td class="color-col">
+                <div class="color" style="background-color: #000000;">
+                </div>
+                <p style="color: #000000;">#000000</p>
+            </td>
+            <td>Limousine</td>
+            <td>0</td>
+            <td data-id="3">
+                <span class="material-icons blue-text mode-tanken">directions_car</span>
+                <span class="material-icons green-text mode-edit">mode_edit</span>
+                <span class="material-icons red-text mode-delete">delete</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Mustache Template -->
+<script id="row-template" type="x-tmpl-mustache">
+    <!-- Start Mustache Template; Foreach object in array -->
+    {{#data}} {{#.}}
+
+    <tr>
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>Elektro</td>
+        <td class="color-col">
+            <div class="color" style="background-color: #000000;">
+            </div>
+            <p style="color: #000000;">#000000</p>
+        </td>
+        <td>Limousine</td>
+        <td>0</td>
+        <td data-id="3">
+            <span class="material-icons blue-text mode-tanken">directions_car</span>
+            <span class="material-icons green-text mode-edit">mode_edit</span>
+            <span class="material-icons red-text mode-delete">delete</span>
+        </td>
+    </tr>
+
+    {{/.}} {{/data}}
+    <!-- End Foreach -->
+</script>

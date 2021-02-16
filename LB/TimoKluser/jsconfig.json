@@ -1,0 +1,8 @@
+// enable jquery intellisense
+{
+    "typeAcquisition": {
+        "include": [
+            "jquery"
+        ]
+    }
+}

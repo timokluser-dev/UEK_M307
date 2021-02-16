@@ -1,0 +1,54 @@
+<!-- Component: list -->
+<table class="data-table striped teal lighten-2 tablesorter">
+    <thead class="teal accent-4">
+        <tr>
+            <th>ID <i class="material-icons right table-icons">arrow_drop_down</i></th>
+            <th>Name <i class="material-icons right table-icons">arrow_drop_down</i></th>
+            <th>Kaufdatum <i class="material-icons right table-icons">arrow_drop_down</i></th>
+            <th>Kaufpreis <i class="material-icons right table-icons">arrow_drop_down</i></th>
+            <th>Kategorie <i class="material-icons right table-icons">arrow_drop_down</i></th>
+            <th>Rating <i class="material-icons right table-icons">arrow_drop_down</i></th>
+            <th data-sorter="false">action <i class="material-icons right table-icons">arrow_drop_down</i></th>
+        </tr>
+    </thead>
+
+    <tbody id="table-body">
+        <!-- Here Mustache -->
+    </tbody>
+</table>
+
+<div class="row mt-2">
+    <div class="col s12 m6 l6">
+        <span id="total_reg"></span>
+    </div>
+
+    <div class="col s12 m6 l6 right-align">
+        <p class="me-2 inline">Limit:</p>
+        <button class="waves-effect waves-light btn sort" data-value="1">1</button>
+        <button class="waves-effect waves-light btn sort" data-value="5">5</button>
+        <button class="waves-effect waves-light btn sort" data-value="10">10</button>
+        <button class="waves-effect waves-light btn sort" data-value="0">ALL</button>
+    </div>
+</div>
+
+<div class="row mt-5 s12 m12 l12">
+    <ul class="center pagination pager" id="ul-pagination"></ul>
+</div>
+
+<!-- Mustache Template -->
+<script id="record-template" type="x-tmpl-mustache">
+    {{#data}} {{#.}}
+    <tr class="animate__animated animate__bounceIn">
+        <td>{{app_id}}</td>
+        <td>{{app_name}}</td>
+        <td>{{app_kaufdatum}}</td>
+        <td>{{app_kaufpreis}} CHF</td>
+        <td>{{app_kategorie}}</td>
+        <td>{{app_rating}}</td>
+        <td data-id="{{app_id}}">
+            <span class="material-icons green-text mode-edit">mode_edit</span>
+            <span class="material-icons red-text mode-delete">delete</span>
+        </td>
+    </tr>
+    {{/.}} {{/data}}
+</script>

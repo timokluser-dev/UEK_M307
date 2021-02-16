@@ -1,0 +1,60 @@
+<!-- Component: form -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h4 id="modal-title"></h4>
+        <div class="modal-main">
+            <!-- Input Fields below -->
+            <!-- see formfields/ -->
+            <div class="row">
+                <div class="input-field col s12 m6 l6">
+                    <input id="field-id" type="number" class="validate" value="0" disabled>
+                    <label for="field-id">ID</label>
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <input id="field-name" type="text" class="validate" data-length="255" required>
+                    <label for="field-name">Name *</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6 l6">
+                    <input id="field-age" type="number" class="validate" step="1">
+                    <label for="field-age">Age</label>
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <input id="field-email" type="email" class="validate" data-length="255" required>
+                    <label for="field-email">E-Mail *</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6 l6">
+                    <select id="field-kraftstoff" required>
+                            <option disabled selected>Choose your option</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Benzin">Benzin</option>
+                            <option value="Elektro">Elektro</option>
+                        </select>
+                    <label for="field-kraftstoff">Kraftstoff *</label>
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <input id="field-bauart" type="text" class="validate" data-length="255" required>
+                    <label for="field-bauart">Bauart *</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6 l6">
+                    <input type="color" id="field-farbe" value="#ffffff" required>
+                    <label for="field-farbe" style="position: unset;">Color *</label>
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <input type="range" id="field-tank" min="0" max="100" />
+                    <label for="field-tank" id="label-tank">Tank *</label>
+                </div>
+            </div>
+            <!-- Input Fields above -->
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="modal-close waves-effect waves-red btn-flat" id="modal-close"><i class="material-icons left">delete_sweep</i> Discard</button>
+        <button class="waves-effect btn-flat" id="modal-save"><i class="material-icons left">save</i> Save</button>
+    </div>
+</div>

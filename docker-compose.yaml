@@ -1,0 +1,47 @@
+version: "3.3"
+services:
+  mariadb:
+    image: mariadb:10.4.17
+    environment:
+      - MYSQL_ROOT_PASSWORD=DEV_1234
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    networks:
+      - local
+    hostname: mariadb
+    restart: "no"
+  phpmyadmin:
+    image: phpmyadmin:5.0.4
+    environment:
+      - PMA_HOST=mariadb
+      - PMA_USER=root
+      - PMA_PASSWORD=DEV_1234
+    ports:
+      - "127.0.0.1:8081:80"
+    networks:
+      - public
+      - local
+    depends_on:
+      - mariadb
+    hostname: phpmyadmin
+    restart: "no"
+  apache:
+    image: php:7.4.13-apache
+    volumes:
+      - .:/var/www/html/
+    ports:
+      - "8080:80"
+    networks:
+      - public
+      - local
+    hostname: apache
+    restart: "no"
+
+volumes:
+  mariadb-data:
+
+networks:
+  public:
+    internal: false
+  local:
+    internal: true

@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "VW Passat",
+            "kraftstoff": "Diesel",
+            "color": "#808080",
+            "bauart": "Limousine",
+            "tank": 0
+        },
+        {
+            "id": 2,
+            "name": "TESLA Model S",
+            "kraftstoff": "Elektro",
+            "color": "#ffffff",
+            "bauart": "Limousine",
+            "tank": 0
+        },
+        {
+            "id": 3,
+            "name": "TESLA Model X",
+            "kraftstoff": "Elektro",
+            "color": "#000000",
+            "bauart": "Limousine",
+            "tank": 0
+        },
+        {
+            "id": 4,
+            "name": "TESLA Model Y",
+            "kraftstoff": "Elektro",
+            "color": "#000080",
+            "bauart": "Limousine",
+            "tank": 0
+        }
+    ],
+    "success": [
+        [
+            "New record successfully added"
+        ]
+    ],
+    "error": [
+        [
+            "No permission to add new record"
+        ]
+    ]
+}

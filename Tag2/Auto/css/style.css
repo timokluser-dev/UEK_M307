@@ -1,0 +1,61 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* register font */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* style */
+
+.container.main {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.brand-logo {
+    padding-left: 15px !important;
+}
+
+li>a {
+    font-weight: 900;
+}
+
+.color-col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.color-col>p {
+    margin-left: 5px;
+}
+
+.color {
+    width: 80px;
+    height: 20px;
+}
+
+.page-footer {
+    padding-top: 0 !important;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+
+/* !: Use contains because css class in not in front ⏬ */
+
+span[class*="mode-"] {
+    cursor: pointer;
+}

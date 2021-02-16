@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Apps</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- meta tags -->
+        <meta name="author" content="Timo Kluser">
+        <meta name="description" content="My Apps Management">
+        <meta name="keywords" content="apps, management, timo kluser">
+        <meta name="robots" content="index, follow">
+        <meta name="copyright" content="Timo Kluser">
+
+        <!-- CSS: normalize css -->
+        <link rel="stylesheet" href="css/frameworks/normalize.css">
+
+        <!-- CSS: bootstrap spacing -->
+        <link rel="stylesheet" href="css/frameworks/spacing.css">
+
+        <!-- CSS: materialize css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- JQuery: FIRST JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- JQuery Plugin: pagination -->
+        <script src="js/frameworks/pagination.js"></script>
+
+        <!-- JQuery Plugin: tablesorter -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+
+        <!-- CSS: animation -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <!-- JS: main javascript -->
+        <script src="js/index.js"></script>
+
+        <!-- CSS: main style -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <nav class="teal lighten-1">
+            <div class="nav-wrapper">
+                <a class="brand-logo animate__animated animate__fadeIn"><i class="medium material-icons">apps</i> My Apps</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#" class="teal darken-3 btn-floating btn-large waves-effect waves-light animate__animated animate__heartBeat mode-new"><i class="material-icons">add</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container main">
+            <!-- Data Table -->
+            <!-- Component: list -->
+            <data-table></data-table>
+        </div>
+
+        <!-- Modal with form -->
+        <!-- Component: form -->
+        <data-modal></data-modal>
+
+        <!-- Delete Modal -->
+        <!-- Component: form-delete -->
+        <data-modal-delete></data-modal-delete>
+
+        <footer class="page-footer teal lighten-1">
+            <div class="footer-copyright">
+                <div class="container" id="footer-text">
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>

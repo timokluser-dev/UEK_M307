@@ -1,0 +1,16 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* register font */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* style */
+
+.table {
+    margin-top: 20px;
+}

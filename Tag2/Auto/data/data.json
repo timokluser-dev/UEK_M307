@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "hans"
+        },
+        {
+            "id": 2,
+            "name": "kurt"
+        }
+    ],
+    "success": [
+        {
+            "message": "success adding new record"
+        }
+    ],
+    "error": [
+        {
+            "message": "No connection to DB possible"
+        },
+        {
+            "message": "No permission to add new record"
+        }
+    ]
+}

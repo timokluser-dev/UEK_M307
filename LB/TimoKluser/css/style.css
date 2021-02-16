@@ -1,0 +1,98 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* register font */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* style */
+
+.container.main {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.brand-logo,
+.footer-copyright .container {
+    padding-left: 15px !important;
+}
+
+li>a {
+    font-weight: 900;
+}
+
+.color-col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.color-col>p {
+    margin-left: 5px;
+}
+
+.color {
+    width: 80px;
+    height: 20px;
+}
+
+.page-footer {
+    padding-top: 0 !important;
+}
+
+#label-tank {
+    margin-top: 15px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+th.tablesorter-header {
+    background-color: transparent !important;
+}
+
+
+/* Tablesorter Custom Theme */
+
+.table-icons {
+    visibility: hidden;
+}
+
+th.tablesorter-headerAsc .table-icons {
+    visibility: visible;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+th.tablesorter-headerDesc .table-icons {
+    visibility: visible;
+}
+
+th.tablesorter-headerUnSorted .table-icons {
+    visibility: hidden;
+}
+
+
+/* sticky footer */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+div.container.main {
+    flex: 1 0 auto;
+}
+
+span[class*="mode-"] {
+    cursor: pointer;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tag4</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+
+    <body>
+        <h1>JS - Validation</h1>
+        <input class="validate" type="text" id="name" data-length="20" minlength="2" maxlength="20">
+        <input class="validate" type="number" name="num" id="num" min="1" max="5" step="1">
+        <button class="btn" id="senden">insert</button>
+        <script>
+            // Document Ready
+            $(function() {
+                $('input#name').characterCounter();
+                $('#senden').click(function(e) {
+                    e.preventDefault();
+                    if ($('#name').hasClass('valid')) {
+                        M.toast({
+                            html: 'Senden klick',
+                            classes: 'green'
+                        });
+                    }
+
+                });
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Autohaus</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- meta tags -->
+        <meta name="author" content="Timo Kluser">
+        <meta name="description" content="Test website for company xyz">
+        <meta name="keywords" content="test, company xyz, location xyz">
+        <meta name="robots" content="index, follow">
+        <meta name="copyright" content="company xyz">
+
+        <!-- normalize css -->
+        <link rel="stylesheet" href="css/normalize.css">
+
+        <!-- materialize css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- FIRST JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- !: Custom script for this component -->
+        <script>
+            // JQuery - Document ready
+            $(function() {
+                console.log('Document ready');
+                setTimeout(InputSet, 2000); // zwei sekunde warten, dann funktion aufrufen
+
+                // Click - Event
+                $('#WerteLesen').click(function() {
+                    // Funktion aufrufen
+                    getValue();
+                    
+                    console.log($('#txtarea').hasClass('valid'));
+                });
+            });
+
+            function InputSet() {
+                // Wert setzten
+                $('#txtarea').val('john.doe@example.com');
+                console.info('Wert wurde in das erste Feld geschrieben');
+                // class valid zu inputfeld hinzufügen
+                $("#txtarea").addClass("valid");
+                // Prefilling Text Inputs (damit Labels nicht im Input Feld sind wenn kein placeholder vorhanden ist)
+                M.updateTextFields();
+            }
+
+            function getValue() {
+                // Wert lesen
+                var tmpVar1 = $('#txtarea').val();
+                console.warn('Wert im Feld 1: ' + tmpVar1);
+                var tmpVar2 = $('#last_name').val();
+                console.warn('Wert im Feld 2: ' + tmpVar2);
+                $('body').append('<hr><p id="Absatz1"> Wert im Feld 1: ' + tmpVar1 + '<br>Wert im Feld 2: ' + tmpVar2 + '</p>');
+            }
+        </script>
+        <!-- !: End script -->
+
+
+        <!-- !: Custom Styles for this component -->
+        <style>
+            .topmargin {
+                margin-top: 30px;
+            }
+            /* Label - Text Farbe bei focus */
+            
+            .input-field input:focus+label {
+                color: red !important;
+            }
+            /* Input Feld - underline color bei focus */
+            
+            .input-field input[type=text]:focus {
+                border-bottom: 2px solid red !important;
+                -webkit-box-shadow: 0 2px 0 0 red !important;
+                -moz-box-shadow: 0 2px 0 0 red !important;
+                box-shadow: 0 2px 0 0 red !important;
+            }
+            /* ICON - Farbe bei active*/
+            
+            .input-field .prefix.active {
+                color: red !important;
+            }
+            
+            #Absatz1 {
+                text-align: center;
+            }
+        </style>
+        <!-- !: End Styles -->
+    </head>
+
+    <body>
+        <h2 class="center">Textarea</h2>
+        <p id="Absatz1">
+            <a class="center" href="https://materializecss.com/text-inputs.html" target="_blank">https://materializecss.com/text-inputs.html</a>
+        </p>
+        <hr>
+        <h4 class="center">Input ohne Placeholder</h4>
+        <p class="center">Wert wird nach 2 Sekunden gesetzt.</p>
+        <div class="topmargin row">
+            <div class="input-field col s4 offset-s4">
+                <textarea id="txtarea" class="materialize-textarea"></textarea>
+                <label for="txtarea">Textarea</label>
+            </div>
+        </div>
+        <h4 class="center">Input mit Placeholder</h4>
+        <div class="topmargin row">
+            <div class="input-field col s4 offset-s4">
+                <i class="material-icons prefix">account_circle</i>
+                <input placeholder="Bitte Nachname eingeben" id="last_name" type="text" class="validate">
+                <label for="last_name">First Name</label>
+            </div>
+        </div>
+        <p id="Absatz1">
+            <button class="btn" id="WerteLesen">Check Werte</button>
+        </p>
+    </body>
+
+</html>
